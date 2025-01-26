@@ -77,12 +77,7 @@
                         <p>Status Mahasiswa</p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="{{route('statusmahasiswa.index')}}" class="nav-link">
-                    <i class="fa-solid fa-briefcase"></i>
-                        <p>Magang</p>
-                    </a>
-                </li>
+                
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
