@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\{
     DashboardController,
-    UserController,MahasiswaController,DosenController,MatakuliahController,ProgramStudiController,SemesterController,RuangKelasController
+    UserController,MahasiswaController,DosenController,MatakuliahController,ProgramStudiController,SemesterController,RuangKelasController,TingkatController,TahunAkademikController,StatusMahasiswaController
 };
 
 
@@ -28,6 +28,9 @@ Route::middleware(['auth:admin', 'admin'])->group(function () {
     Route::resource('/programstudi', ProgramStudiController::class);
     Route::resource('/semester', SemesterController::class);
     Route::resource('/ruangkelas', RuangKelasController::class);
+    Route::resource('/tingkat', TingkatController::class);
+    Route::resource('/tahunakademik', TahunAkademikController::class);
+    Route::resource('/statusmahasiswa', StatusMahasiswaController::class);
 
     
 });

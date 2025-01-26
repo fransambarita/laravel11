@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class Mahasiswa  extends Authenticatable
+class TahunAkademik  extends Authenticatable
 {
     use HasFactory, Notifiable;
 
@@ -16,20 +16,10 @@ class Mahasiswa  extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $table = 'mahasiswa';
+    protected $table = 'tahun_akademik';
     protected $fillable = [
-        'nama_mahasiswa',
-        'tempat_lahir',
-        'tanggal_lahir',
-        'nama_ibu_kandung',
-        'jenis_kelamin',
-        'kewarganegaraan',
-        'agama',
-        'no_ktp ',
-        'alamat',
-        'kabupaten_kota',
-        'file_foto'
-
+        'tahun_akademik',
+        'is_active',
     ];
 
     public $timestamps = true;

@@ -60,9 +60,9 @@
                             <div class="mb-3">
                                 <label for="email">Jenis Kelamin</label>
                                 <select class="form-control"  name="jenis_kelamin" id="jenis_kelamin">
-                                    <option value="" disabled selected>Pilih</option>
-                                    <option value="Laki-laki">Laki Laki</option>
-                                    <option value="Perempuan">Perempuan</option>                            
+                                <option value="">-- Pilih Jenis Kelamin --</option>
+                                    <option value="Laki-laki" {{ $data->jenis_kelamin == 'Laki-laki' ? 'selected' : '' }}>Laki-laki</option>
+                                    <option value="Perempuan" {{ $data->jenis_kelamin == 'Perempuan' ? 'selected' : '' }}>Perempuan</option>                           
                                 </select> 
                             
                             </div>
@@ -74,7 +74,35 @@
                                 <input type="text" name="kewarganegaraan" id="kewarganegaraan" class="form-control" placeholder="Email"
                                     value="{{ old('kewarganegaraan', $data->kewarganegaraan) }}" autocomplete="new-email" required>
                             </div>
-                        </div>  
+                        </div>
+                        
+                        
+
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="email">Kabupaten / Kota</label>
+                                <input type="text" name="kabupaten_kota" id="kabupaten_kota" class="form-control" 
+                                    value="{{ old('kabupaten_kota', $data->kabupaten_kota) }}" autocomplete="new-email" required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="email">Agama</label>
+                                <select class="form-control"  name="agama" id="agama">
+                                <option value="">-- Pilih Agama --</option>
+                                    <option value="Krtisten" {{ $data->agama == 'Kristen' ? 'selected' : '' }}>Kristen</option>
+                                    <option value="Islam" {{ $data->agama == 'Islam' ? 'selected' : '' }}>Islam</option>
+                                    <option value="Katolik" {{ $data->agama == 'Katolik' ? 'selected' : '' }}>Katolik</option>  
+                                    <option value="Budha" {{ $data->agama == 'Budha' ? 'selected' : '' }}>Budha</option>  
+                                    <option value="Hindu" {{ $data->agama == 'Hindu' ? 'selected' : '' }}>Hindu</option>  
+                                                             
+                                </select> 
+                            
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
             </div>

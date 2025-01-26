@@ -59,6 +59,30 @@
                         <p>Ruang Kelas</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{route('tingkat.index')}}" class="nav-link">
+                    <i class="fa-solid fa-building"></i>
+                        <p>Tingkat</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('tahunakademik.index')}}" class="nav-link">
+                    <i class="fa-solid fa-building"></i>
+                        <p>Tahun Akademik</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('statusmahasiswa.index')}}" class="nav-link">
+                    <i class="fa-solid fa-building"></i>
+                        <p>Status Mahasiswa</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('statusmahasiswa.index')}}" class="nav-link">
+                    <i class="fa-solid fa-briefcase"></i>
+                        <p>Magang</p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

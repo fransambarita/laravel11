@@ -73,6 +73,35 @@
                             </div>
                         </div>
 
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="kewarganegaraaan">Agama</label>
+                                <select class="form-control"  name="agama" id="agama">
+                                    <option value="Kristen">Kristen</option>
+                                    <option value="Islam">Islam</option>
+                                    <option value="Katolik">Katolik</option>
+                                    <option value="Budha">Budha</option>
+                                    <option value="Hindu">Hindu</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="kabupaten_kota">Kabupaten / Kota</label>
+                                <input type="text" name="kabupaten_kota" id="kabupaten_kota" class="form-control" 
+                                    autocomplete="kabupaten_kota" required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="file_foto">Foto</label>
+                                <input type="file" name="file_foto" id="file_foto" class="form-control" 
+                                    autocomplete="file_foto" required>
+                            </div>
+                        </div>
+
                         
 
                     </div>

@@ -31,9 +31,18 @@ class MahasiswaController extends Controller
             'nama_ibu_kandung' => 'required',
             'jenis_kelamin' => 'required',
             'kewarganegaraan' => 'required',
+            'agama' => 'required',
+            'kabupaten_kota' => 'required',
+            'file_foto' => 'nullable|image|mimes:jpeg,png,jpg|max:2048', // Validasi foto
+
         ]);
 
         if ($validatorData->passes()) {
+            // Proses upload foto
+            $fotoPath = null;
+            if ($request->hasFile('file_foto')) {
+                $fotoPath = $request->file('file_foto')->store('mahasiswa', 'public');
+            }
             Mahasiswa::create([
                 'nama_mahasiswa' => $request->nama_mahasiswa,
                 'tempat_lahir' => $request->tempat_lahir,
@@ -41,6 +50,9 @@ class MahasiswaController extends Controller
                 'nama_ibu_kandung' => $request->nama_ibu_kandung,
                 'jenis_kelamin' => $request->jenis_kelamin,
                 'kewarganegaraan' => $request->kewarganegaraan,
+                'agama' => $request->agama,
+                'kabupaten_kota' => $request->kabupaten_kota,
+                'file_foto' => $fotoPath, // Simpan path foto
             ]);
 
             return redirect()->route('mahasiswa.index')->with('success', 'Data Berhasil Disimpan');
@@ -63,6 +75,9 @@ class MahasiswaController extends Controller
             'nama_ibu_kandung' => 'required',
             'jenis_kelamin' => 'required',
             'kewarganegaraan' => 'required',
+            'agama' => 'required',
+            'kabupaten_kota' => 'required',
+        
         ]);
         $mahasiswa = Mahasiswa::find($id);
         $mahasiswa->update([
@@ -72,6 +87,9 @@ class MahasiswaController extends Controller
             'nama_ibu_kandung' => $request->nama_ibu_kandung,
             'jenis_kelamin' => $request->jenis_kelamin,
             'kewarganegaraan' => $request->kewarganegaraan,
+            'agama' => $request->agama,
+            'kabupaten_kota' => $request->kabupaten_kota,
+    
         ]);
 
         return response()->json([
